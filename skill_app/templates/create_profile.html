@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<section class="sptb">
+			<div class="container customerpage">
+				<div class="row">
+				    <div class="single-page" >
+						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+							<div>
+								
+							</div>
+							<div class="wrapper wrapper2">
+								<form  class="card-body" tabindex="500" enctype="multipart/form-data" action="." method="POST">
+									{% csrf_token %}
+									<h3>Create Profile</h3>
+									<div class="mail">
+										<input type="text" name="full_name" required><br>
+										<label>Full Name</label>
+									</div>
+									<div >
+										<input type="file" name="image" accept=".jpg, .png, image/jpeg" required><br>
+										<label>Uplaod Profile Picture</label>
+									</div>
+									<div class="name">
+										<input type="text" name="city" required ><br>
+										<label>City</label>
+									</div>
+									<div>
+										<select name="gender">
+											<option >------</option>
+											<option value="Male">Male</option>
+											<option value="Femail">Female</option>
+										</select><br>
+										<label>Gender</label>
+									</div>
+									
+									
+									<div >
+										<input type="submit" name="submit">
+										
+									</div>
+									
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/Register-section-->
+
+	
+
+{% endblock %}

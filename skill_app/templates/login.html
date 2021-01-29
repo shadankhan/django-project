@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<section class="sptb">
+			<div class="container customerpage">
+				<div class="row">
+				    <div class="single-page" >
+						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+							<div>
+								{% for m in messages %}
+								<center>
+								<h3 style="color:red">{{m}}</h3>
+								</center>
+								{% endfor %}
+							</div>
+							<div class="wrapper wrapper2">
+								<form  class="card-body" tabindex="500" action="." method="POST">
+									{% csrf_token %}
+									<h3>Register</h3>
+									<div class="mail">
+										<input type="text" name="username"><br>
+										<label>Username</label>
+									</div>
+									
+									<div class="passwd">
+										<input type="password" name="password">
+										<label>Password</label>
+									</div>
+									<div >
+										<input type="submit" name="submit">
+										
+									</div>
+									<p class="text-dark mb-0">Already have an account?<a href="login.html" class="text-primary ml-1">Sign In</a></p>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/Register-section-->
+
+	
+
+{% endblock %}
